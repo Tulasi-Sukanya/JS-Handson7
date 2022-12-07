@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Handson-7</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <h1><marquee>JS Handson-7(Objects)</marquee></h1>
+    <div class="container">
+        <div class="card">
+            <span>1.Create a Function</span>
+            <p>Complete the function in the editor. In which you are given one object as a parameter, in that object, there is a data member named name. Your task is to create a method inside this object named setter, such that this method will print the value of the data member named as name.</p>
+            <pre>
+                function Check(obj1){
+                    obj1.setter = function(){
+                      console.log(obj1.name);
+                    };
+                }
+                Input:Utkarsh
+                Output:Utkarsh
+            </pre>
+        </div>
+        <div class="card">
+            <span>2.Delete a Parameter</span>
+            <p>Complete the function in the editor. You have an object as a parameter. In which you have to delete the rollno property from the object and return the object.</p>
+            <pre>
+                function Check(obj1) {
+                    let value = delete obj1.rollno;
+                    return value;
+                }
+                Input:
+                Utkarsh
+                129
+                Output:True
+            </pre>
+        </div>
+        <div class="card">
+            <span>3.Check whether the Package is Dream Package or not</span>
+            <p>Complete the function in the editor. In which you are given an object as a parameter.In that object, there is one property named as salary if the salary is maximum than 5 lakh then return "Dream" otherwise  return "NotDream".</p>
+            <pre>
+                function Check(obj1) {
+                    if(obj1.salary > 500000){
+                      return "Dream";
+                    }
+                    else{
+                      return "NotDream";
+                    }
+                }
+                Input:100000
+                Output:NotDream
+            </pre>
+        </div>
+        <div class="card">
+            <span>4.Check whether the Object has a parameter or not</span>
+            <p>Complete the function in the editor. In which you are given an object as a parameter. You have to return "false" if there is no parameter in the object otherwise return "true".</p>
+            <pre>
+                function Check(obj1) {
+                    let count=0;
+                    for(let i in obj1 ){
+                      count++;
+                    }
+                    if(count === 0){
+                      return "false";
+                    }
+                    else{
+                      return "true";
+                    }
+                }
+                Input:1
+                Output:true    
+            </pre>
+        </div>
+        <div class="card">
+            <span>5.Merge the Objects</span>
+            <p>Complete the function in the editor. In which you are given two objects as a parameter.In which you have to merge two objects and return a single object.</p>
+            <pre>
+                function Check(obj1,obj2) {
+                    let obj3= Object.assign(obj1,obj2);
+                    return obj3;
+                }
+                Input:Utkarsh 
+                129
+                Haryana
+                121009
+                Output:Utkarsh
+                129
+                Haryana
+                121009
+            </pre>
+        </div>
+        <div class="card">
+            <span>6.Object Multiplyer</span>
+            <p>Complete the function in the editor. In which you are given an object and a digit N as a parameter.In the object there are two variable id and houseno are defined as a data member. You have to multiply both the data members with a given digit N.</p>
+            <pre>
+                function Check(a,obj1) {
+                    obj1.id = obj1.id * a;
+                    obj1.houseno = obj1.houseno * a;
+                    return obj1;
+                   }
+                   Input:2
+                   12
+                   146
+                   Output:
+                   24
+                   292
+            </pre>
+        </div>
+        <div class="card">
+            <span>7.Find the  sum of Object Members</span>
+            <p>You are given a function Check which takes an object Obj as a parameter.Your taks is to find out the sum of the three data members of the object. The data members are named as p1, p2, p3</p>
+            <pre>
+                function Check(obj1) {
+                    let sum=0;
+                    for(let i in obj1){
+                      sum = obj1[i] + sum;
+                    }
+                    return sum;
+                }
+                Input:1
+                2
+                3
+                Output:6
+            </pre>
+        </div>
+        <div class="card">
+            <span>8.Check whether the Objects are same or not.</span>
+            <p>Complete the function in editor. In which you are given object as a parameter. That object contains two variables name and id.Your task is to compare the object name and id to the new_name and new_id given there as parameter.Return "true" if new_name and id are same as objects name and id otherwise return"false".</p>
+            <pre>
+                function check(obj1,a,b) {
+                    for(let i in obj1){
+                      if((obj1.name === a) && obj1.id === b){
+                        return "true";
+                      }
+                      else{
+                        return "false";
+                      }
+                    }
+                }
+                Input:Utkarsh 
+                2 
+                Prepbytes 
+                3
+                Output:false
+            </pre>
+        </div>
+    </div>
+</body>
